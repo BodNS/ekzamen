@@ -38,7 +38,7 @@ module.exports.dataForContest = async (req, res, next) => {
 
 module.exports.getContestById = async (req, res, next) => {
   try {
-    let contestInfo = await db.Contests.findOne({
+    const contestInfo = await db.Contests.findOne({
       where: { id: req.headers.contestid },
       order: [
         [db.Offers, 'id', 'asc'],
@@ -232,7 +232,7 @@ module.exports.getCustomersContests = (req, res, next) => {
     .then(contests => {
       contests.forEach(
         contest => contest.dataValues.count = contest.dataValues.Offers.length);
-      let haveMore = true;
+      const haveMore = true;
       if (contests.length === 0) {
         haveMore = false;
       }
