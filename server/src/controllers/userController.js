@@ -56,6 +56,7 @@ module.exports.registration = async (req, res, next) => {
   }
 };
 
+//???
 function getQuery (offerId, userId, mark, isFirst, transaction) {
   const getCreateQuery = () => ratingQueries.createRating({
     offerId,

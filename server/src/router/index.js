@@ -38,7 +38,7 @@ router.post(
   userController.payment,
 );
 
-router.post(
+router.get(
   '/getCustomersContests',
   checkToken.checkToken,
   contestController.getCustomersContests,
@@ -51,19 +51,20 @@ router.get(
   contestController.getContestById,
 );
 
-router.post(
+router.get(
   '/getAllContests',
   checkToken.checkToken,
   basicMiddlewares.onlyForCreative,
   contestController.getContests,
 );
 
-router.post(
+// ???
+router.get(
   '/getUser',
   checkToken.checkAuth,
 );
 
-router.get(
+router.post(
   '/downloadFile/:fileName',
   checkToken.checkToken,
   contestController.downloadFile,
@@ -124,7 +125,7 @@ router.post(
   chatController.getChat,
 );
 
-router.post(
+router.get(
   '/getPreview',
   checkToken.checkToken,
   chatController.getPreview,
@@ -166,13 +167,13 @@ router.post(
   chatController.removeChatFromCatalog,
 );
 
-router.post(
+router.delete(
   '/deleteCatalog',
   checkToken.checkToken,
   chatController.deleteCatalog,
 );
 
-router.post(
+router.get(
   '/getCatalogs',
   checkToken.checkToken,
   chatController.getCatalogs,
