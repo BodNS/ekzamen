@@ -31,7 +31,7 @@ export const getCustomersContests = (data) => http.get('getCustomersContests', {
 
 export const getActiveContests = ({
   offset, limit, typeIndex, contestId, industry, awardSort, ownEntries,
-}) => http.get('getAllContests', {
+}) => http.get('/contests', {
   offset, limit, typeIndex, contestId, industry, awardSort, ownEntries,
 });
 
