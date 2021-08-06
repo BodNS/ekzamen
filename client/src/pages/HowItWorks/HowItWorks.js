@@ -23,4 +23,4 @@ return (
 )
 };
 
-export default howItWorks;
+export default connect(null, )(howItWorks);
