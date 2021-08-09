@@ -14,9 +14,9 @@ return (
     <>
     <Header />  
     <div className={styles.main}>
-        <div className="container">
+        <div className={styles.container}>
             <div className="">
-                 <span class="">World's #1 Naming Platform</span>
+                 <span class={styles.blue_name}>World's #1 Naming Platform</span>
                 <div className="">
                 <h1 class="">How Does Squadhelp Work?</h1>
                 <p>
@@ -24,8 +24,8 @@ return (
                 </p>
                 </div>
             </div>
-            <div className="">
-                <img class="js-svg-injector" src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Image Description" />
+            <div className={styles.pict_container}>
+                <img class={styles.pict1} src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Image Description" />
             </div>
             <div className="video_btn">
                 <a class="" data-fancybox="" href="https://vimeo.com/368584367">
