@@ -12,9 +12,9 @@ import styles from './HowItWorks.module.sass';
 const howItWorks = (props) => {
 return (
     <>
-    <Header />
-    <div className="all">
-        <div className="1">
+    <Header />  
+    <div className={styles.main}>
+        <div className="container">
             <div className="">
                  <span class="">World's #1 Naming Platform</span>
                 <div className="">

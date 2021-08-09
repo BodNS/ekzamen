@@ -37,7 +37,7 @@ class App extends Component {
         />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/howItWorks" component={howItWorks} />
+          <Route exact path="/how-it-works" component={howItWorks} />
           <Route exact path="/login" component={OnlyNotAuthorizedUserHoc(LoginPage)} />
           <Route exact path="/registration" component={OnlyNotAuthorizedUserHoc(RegistrationPage)} />
           <Route exact path="/payment" component={PrivateHoc(Payment)} />
