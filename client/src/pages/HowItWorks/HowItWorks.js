@@ -15,44 +15,55 @@ return (
     <Header />  
     <div className={styles.main}>
         <div className={styles.container}>
-            <div className="">
-                 <span class={styles.blue_name}>World's #1 Naming Platform</span>
-                <div className="">
-                <h1 class="">How Does Squadhelp Work?</h1>
+            <div className={styles.txt_container}>
+                <div className={styles.wrap_blue_name}>
+                    <span className={styles.blue_name}>World's #1 Naming Platform</span>
+                 </div>
+                <h1>How Does Squadhelp Work?</h1>
                 <p>
                     Squadhelp helps you come up with a great name for your business by combining the power of crowdsourcing with sophisticated technology and Agency-level validation services.
                 </p>
-                </div>
-            </div>
-            <div className={styles.pict_container}>
-                <img class={styles.pict1} src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Image Description" />
-            </div>
-            <div className="video_btn">
+                <div className={styles.video_btn}>
                 <a class="" data-fancybox="" href="https://vimeo.com/368584367">
                 Play Video
                 </a>
             </div>
+            </div>
+            <div className={styles.pict_container}>
+                <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Image Description" />
+            </div>
+            
              
         </div>
-        <div className="2">
-            <div className="2_title">
-                <span class="">World's #1 Naming Platform</span>
-                <h2 class="">3 Ways To Use Squadhelp</h2>
-                <p class="">Squadhelp offers 3 ways to get you a perfect name for your business.</p>
+        <div className={styles.container_2}>
+            <div className={styles.txt_container_2}>
+            <div className={styles.wrap_blue_name_2}>
+                <span class={styles.blue_name}>Our Services</span>
             </div>
-            <div className="3_card">
-                <div className="Card">
+            <div>
+                <h2>3 Ways To Use Squadhelp</h2>
+            </div>
+                <p>Squadhelp offers 3 ways to get you a perfect name for your business.</p>
+            </div>
+            <div className={styles.card_container}>
+                <div className={styles.card}>
+                    <div className={styles.card_pict}>
+                        <img />
+                    </div>
+                <div className={styles.card_title}>   
+                </div>
+                <div className={styles.card_txt}>
 
                 </div>
-                <div className="Card">
+                <div className={styles.card}>
                     
                 </div>
-                <div className="Card">
+                <div className={styles.card}>
                     
                 </div>
-            </div>
-        </div>
-        <div className="3">
+`            </div>
+`        </div>
+        <div className={styles.container}>
             <div className="title">
                 <img />
                 <h2 class="">How Do Naming Contests Work?</h2>

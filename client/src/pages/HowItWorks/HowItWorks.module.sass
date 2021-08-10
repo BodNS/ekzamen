@@ -1,30 +1,126 @@
 .main
-    margin-top: 12px
+    font-family: Poppins, Helvetica, Arial, sans-serif
+    color: #1e2022
+    display: flex
+    flex-direction: column
+    justify-content: centr
+    
+    h1
+        font-size: 50px
+        margin-bottom: 10px
+        line-height: 1.2
+
+    h2 
+        text-align: center
+        font-family: Raleway, sans-serif
+        margin-bottom: 10px
+        font-size: 40px
+        font-weight: 500
+
+    h3
+        text-align: center
+        margin-bottom: 20px
+        font-size: 22px
+
+    p
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: flex-start
+        margin-bottom: 20px
+        line-height: 1.5
+        color: #555C6B
+        font-size: 20px
    
 
 .container
-    width: 100%
-    padding-right: 15px
-    padding-left: 15px
-    margin-right: auto
-    margin-left: auto
+    width: 70%
+    padding: 40px 15px
+    margin: 0px auto
     display: flex
-    flex-direction: column
+    flex-direction: row
     justify-content: flex-start
     align-items: center
 
-.pict_container
-    height: 386px
-    weight: 445px
+    .txt_container
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items:center
 
-.pict1
-    weight: inherit
-    height: inherit
+        .video_btn
+            background: #377dff
+            border-radius: 15px
+            padding: 15px 20px
+            margin-bottom: 80px 
+            font-size: 20px
+            display: flex
+            width: 100px
+
+            &:hover
+               transform: translateY(-3px)
+               transition: all 0.4s ease-in-out
+               box-shadow: 0 4px 11px rgba(0, 0, 255, 0.35)
+        
+            a 
+                text-decoration: none
+                color: #fff
+
+    .pict_container
+        height: 386px
+        weight: 445px
+        margin-bottom: 30px
+        padding: 0 15px
+        
+
+        img
+            weight: inherit
+            height: inherit
+            background-size: cover
+            background-repeat: no-repeat
+            object-fit: cover
+            z-index: 1
+  
 
 .blue_name
     color: #377dff
     border-radius: 6.1875rem
     background: rgba(55,125,255,.1)
-    border-color: transparent
     text-align: center
     vertical-align: middle
+    font-size: 13px
+    padding: 8px 18px
+    
+.wrap_blue_name
+    text-align: left
+    margin-bottom: 10px
+
+.wrap_blue_name_2
+    text-align: center
+    margin-bottom: 10px
+   
+        
+.container_2
+    width: 80%
+    padding: 15px 0px
+    margin: 0px 25px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center        
+
+.txt_container_2
+    margin: 0px 93px 80px
+
+.card_container
+    display:flex
+    flex-direction:row
+    justify-content: space-around
+    align-items:center
+
+.card
+    border: 1px solid grey
+    margin: 0px 18px
+    padding: 80px 20px
+
+    
