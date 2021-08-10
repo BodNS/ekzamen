@@ -30,7 +30,7 @@ return (
             </div>
             </div>
             <div className={styles.pict_container}>
-                <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Image Description" />
+                <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Man In Phone" />
             </div>
             
              
@@ -48,21 +48,48 @@ return (
             <div className={styles.card_container}>
                 <div className={styles.card}>
                     <div className={styles.card_pict}>
-                        <img />
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/icon-7.svg`} alt="Card Image"/>
                     </div>
-                <div className={styles.card_title}>   
-                </div>
-                <div className={styles.card_txt}>
-
+                    <div className={styles.card_title}>   
+                        <h3>Launch a Contest</h3>
+                    </div>
+                    <div className={styles.card_txt}>
+                        <p>
+                            Work with hundreds of creative experts to get custom name suggestions for your business or brand. All names are auto-checked for URL availability.
+                        </p>
+                    </div>
+                    <a class="">Launch a Contest</a>
                 </div>
                 <div className={styles.card}>
-                    
+                <div className={styles.card_pict}>
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/icon-40.svg`} alt="Card Image"/>
+                    </div>
+                    <div className={styles.card_title}>   
+                        <h3>Explore Names For Sale</h3>
+                    </div>
+                    <div className={styles.card_txt}>
+                        <p>
+                        Our branding team has curated thousands of pre-made names that you can purchase instantly. All names include a matching URL and a complimentary Logo Design
+                        </p>
+                    </div>
+                    <a class="">Explore Names For Sale</a>
                 </div>
                 <div className={styles.card}>
-                    
+                <div className={styles.card_pict}>
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/icon-24.svg`} alt="Card Image"/>
+                    </div>
+                    <div className={styles.card_title}>   
+                        <h3>Agency-level Managed Contests</h3>
+                    </div>
+                    <div className={styles.card_txt}>
+                        <p>
+                        Work with hundreds of creative experts to get custom name suggestions for your business or brand. All names are auto-checked for URL availability.
+                        </p>
+                    </div>
+                    <a class="">Learn More</a>
                 </div>
 `            </div>
-`        </div>
+        </div>
         <div className={styles.container}>
             <div className="title">
                 <img />
@@ -188,7 +215,6 @@ return (
             </div>
         </div>
     </div>
-
     <Footer />
     </>
 )
