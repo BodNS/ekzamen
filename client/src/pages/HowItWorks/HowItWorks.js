@@ -24,10 +24,10 @@ return (
                     Squadhelp helps you come up with a great name for your business by combining the power of crowdsourcing with sophisticated technology and Agency-level validation services.
                 </p>
                 <div className={styles.video_btn}>
-                <a class="" data-fancybox="" href="https://vimeo.com/368584367">
-                Play Video
-                </a>
-            </div>
+                    <a href="https://vimeo.com/368584367">
+                        Play Video
+                    </a>
+                </div>
             </div>
             <div className={styles.pict_container}>
                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Man In Phone" />
@@ -56,9 +56,11 @@ return (
                     <div className={styles.card_txt}>
                         <p>
                             Work with hundreds of creative experts to get custom name suggestions for your business or brand. All names are auto-checked for URL availability.
-                        </p>
+                    </p>
                     </div>
-                    <a class="">Launch a Contest</a>
+                    <div className={styles.btn}>
+                        <a href="https://www.squadhelp.com/start-contest">Launch a Contest</a>
+                    </div>
                 </div>
                 <div className={styles.card}>
                 <div className={styles.card_pict}>
@@ -72,7 +74,9 @@ return (
                         Our branding team has curated thousands of pre-made names that you can purchase instantly. All names include a matching URL and a complimentary Logo Design
                         </p>
                     </div>
-                    <a class="">Explore Names For Sale</a>
+                    <div className={styles.btn}>
+                        <a href="https://www.squadhelp.com/premium-domains-for-sale/">Explore Names For Sale</a>
+                    </div>
                 </div>
                 <div className={styles.card}>
                 <div className={styles.card_pict}>
@@ -83,10 +87,12 @@ return (
                     </div>
                     <div className={styles.card_txt}>
                         <p>
-                        Work with hundreds of creative experts to get custom name suggestions for your business or brand. All names are auto-checked for URL availability.
+                            Work with hundreds of creative experts to get custom name suggestions for your business or brand. All names are auto-checked for URL availability.
                         </p>
                     </div>
-                    <a class="">Learn More</a>
+                    <div className={styles.btn}>
+                        <a href="https://www.squadhelp.com/managed-contests">Learn More</a>
+                    </div>
                 </div>
 `            </div>
         </div>
