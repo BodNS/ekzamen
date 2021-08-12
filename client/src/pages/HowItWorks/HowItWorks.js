@@ -14,8 +14,8 @@ return (
     <>
     <Header />  
     <div className={styles.main}>
-        <div className={styles.container}>
-            <div className={styles.txt_container}>
+        <div className={styles.container_1}>
+            <div className={styles.txt_container_1}>
                 <div className={styles.wrap_blue_name}>
                     <span className={styles.blue_name}>World's #1 Naming Platform</span>
                  </div>
@@ -29,7 +29,7 @@ return (
                     </a>
                 </div>
             </div>
-            <div className={styles.pict_container}>
+            <div className={styles.pict_container_1}>
                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/ManInPhone.svg`} alt="Man In Phone" />
             </div>
             
@@ -96,28 +96,46 @@ return (
                 </div>
 `            </div>
         </div>
-        <div className={styles.container}>
-            <div className="title">
-                <img />
-                <h2 class="">How Do Naming Contests Work?</h2>
+        <hr className={styles.linehr} />
+        <div className={styles.container_3}>
+            <div className={styles.title_container_3}>
+                <div className={styles.card_pict}>
+                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/icon-27.svg`} alt="Card Image"/>
+                </div>
+                <h2>How Do Naming Contests Work?</h2>
             </div>
-            <div className="pict">
-                <img />
-            </div>
-            <div className="">
+            <div className={styles.pict_spisok_container_3}>
+                <div className={styles.pict_container_3}>
+                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/support-man.svg`} alt="Card Image"/>
+                </div>
+                <div className={styles.spisok_container_3}>
                 <ul>
                     <li>
-                        Fill out your Naming Brief and begin receiving name ideas in minutes                    </li>
-                    <li>
-                        Rate the submissions and provide feedback to creatives. Creatives submit even more names based on your feedback.
+                        <div className={styles.div_li}>
+                            <span className={styles.blue_numb}>1.</span>
+                            <p>Fill out your Naming Brief and begin receiving name ideas in minutes  </p>   
+                        </div>
                     </li>
                     <li>
-                        Our team helps you test your favorite names with your target audience. We also assist with Trademark screening.
+                        <div className={styles.div_li}>
+                            <span className={styles.blue_numb}>2.</span>
+                            <p>Rate the submissions and provide feedback to creatives. Creatives submit even more names based on your feedback.</p>
+                        </div>
                     </li>
                     <li>
-                        Pick a Winner. The winner gets paid for their submission.
+                        <div className={styles.div_li}>
+                            <span className={styles.blue_numb}>3.</span>
+                            <p>Our team helps you test your favorite names with your target audience. We also assist with Trademark screening.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div className={styles.div_li}>
+                            <span className={styles.blue_numb}>4.</span>
+                            <p>Pick a Winner. The winner gets paid for their submission.</p>
+                        </div>
                     </li>
                 </ul>
+            </div>
             </div>
         </div>
         <div className="4">

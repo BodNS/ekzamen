@@ -1,5 +1,15 @@
+$blue_color: #377dff
+$pcolor: #77838f
+
+@mixin container
+    
+    margin: 0px auto
+    display: flex
+    align-items: center
+    margin: 0px 190px
+ 
 @mixin blue_btn
-    background: #377dff
+    background: $blue_color
     border-radius: 15px
     padding: 15px 20px
     margin-bottom: 80px 
@@ -21,6 +31,7 @@
     display: flex
     flex-direction: column
     justify-content: center
+    align-items: center
 
     img
         weight: inherit
@@ -58,22 +69,19 @@
         font-size: 20px
    
 
-.container
-    width: 70%
-    padding: 40px 15px
-    margin: 0px auto
-    display: flex
+.container_1
+    @include container
     flex-direction: row
     justify-content: flex-start
-    align-items: center
+    padding: 40px 15px
 
-    .txt_container
+    .txt_container_1
         display: flex
         flex-direction: column
         justify-content: flex-start
         align-items:center
 
-    .pict_container
+    .pict_container_1
         height: 386px
         weight: 445px
         margin: 0px 30px
@@ -84,12 +92,11 @@
     @include blue_btn
     width: 100px
 
-
 .btn
     @include blue_btn
 
 .blue_name
-    color: #377dff
+    color: $blue_color
     border-radius: 6.1875rem
     background: rgba(55,125,255,.1)
     text-align: center
@@ -100,22 +107,18 @@
 .wrap_blue_name
     text-align: left
     margin-bottom: 10px
-    padding: 8px 18px
 
 .wrap_blue_name_2
     text-align: center
     margin-bottom: 10px
-    padding: 8px 18px
+    
    
         
 .container_2
-    width: 80%
-    padding: 15px 0px
-    margin: 0px 25px
-    display: flex
+    @include container
     flex-direction: column
     justify-content: center
-    align-items: center        
+    padding: 40px 15px
 
 .txt_container_2
     margin: 0px 93px 80px
@@ -145,15 +148,69 @@
         padding: 10px
 
 .card_pict
-    height: 72px
-    weight: 72px
+    height: 90px
+    weight: 90px
     margin-bottom: 10px    
 
-    img
-        weight: inherit
-        height: inherit
-        background-size: cover
-        background-repeat: no-repeat
-        object-fit: cover
-        z-index: 1 
+.line
+    margin-bottom: 0
+    margin-top: 0
+    border: 0
+    border-top: 1px solid #e7eaf3
+    box-sizing: content-box
+    height: 0
+    overflow: visible
+
+
+.container_3
+    @include container
+    justify-content: center
+    flex-direction: column
+    padding: 160px 15px
     
+
+.title_container_3
+    margin: 0px auto 80px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+.pict_container_3
+    width: 480px
+    height: 550px
+
+.pict_spisok_container_3
+    display: flex
+    justify-content: center
+    flex-direction: row
+    align-items: center
+    margin: 0px -15px
+
+.spisok_container_3
+    padding: 0px 15px
+    
+
+    ul
+        margin-bottom: 20px
+    li
+        padding: 20px 0px 20px 50px
+    span
+        color: $blue_color
+        font-size: 3.5rem
+        line-height: 1.2
+        margin-right: 20px
+.div_li
+    padding: 40px
+    border: solid 1px grey
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    p
+        color: $pcolor
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.5
+
+.pict_container_3
