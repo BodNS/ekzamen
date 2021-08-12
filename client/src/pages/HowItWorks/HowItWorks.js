@@ -96,7 +96,7 @@ return (
                 </div>
 `            </div>
         </div>
-        <hr className={styles.linehr} />
+        <hr className={styles.linehr}/>
         <div className={styles.container_3}>
             <div className={styles.title_container_3}>
                 <div className={styles.card_pict}>
@@ -104,7 +104,7 @@ return (
                 </div>
                 <h2>How Do Naming Contests Work?</h2>
             </div>
-            <div className={styles.pict_spisok_container_3}>
+            <div className={styles.pict_and_spisok_container_3}>
                 <div className={styles.pict_container_3}>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/support-man.svg`} alt="Card Image"/>
                 </div>
@@ -138,7 +138,8 @@ return (
             </div>
             </div>
         </div>
-        <div className="4">
+        <hr className={styles.linehr}/> /*я не знаю почему они не отображаются */
+        <div className={styles.container_4}>
             <div className="nav">
                 <ul>
                     <li>

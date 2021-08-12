@@ -2,11 +2,9 @@ $blue_color: #377dff
 $pcolor: #77838f
 
 @mixin container
-    
-    margin: 0px auto
     display: flex
     align-items: center
-    margin: 0px 190px
+    width: 1110px
  
 @mixin blue_btn
     background: $blue_color
@@ -152,7 +150,7 @@ $pcolor: #77838f
     weight: 90px
     margin-bottom: 10px    
 
-.line
+.linehr
     margin-bottom: 0
     margin-top: 0
     border: 0
@@ -167,7 +165,14 @@ $pcolor: #77838f
     justify-content: center
     flex-direction: column
     padding: 160px 15px
+    width: 1140px
     
+.pict_spisok_container_3
+    display: flex
+    justify-content: center
+    flex-direction: row
+    align-items: center
+    margin: 0px -15px
 
 .title_container_3
     margin: 0px auto 80px
@@ -179,8 +184,9 @@ $pcolor: #77838f
 .pict_container_3
     width: 480px
     height: 550px
+    padding-right: 48px  
 
-.pict_spisok_container_3
+.pict_and_spisok_container_3
     display: flex
     justify-content: center
     flex-direction: row
@@ -189,7 +195,6 @@ $pcolor: #77838f
 
 .spisok_container_3
     padding: 0px 15px
-    
 
     ul
         margin-bottom: 20px
@@ -200,17 +205,23 @@ $pcolor: #77838f
         font-size: 3.5rem
         line-height: 1.2
         margin-right: 20px
-.div_li
-    padding: 40px
-    border: solid 1px grey
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
-    p
-        color: $pcolor
-        font-size: 1rem
-        font-weight: 400
-        line-height: 1.5
+   
+    .div_li
+        padding: 40px
+        border: solid 1px grey
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        width: 500px
+        box-sizing: border-box
 
-.pict_container_3
+        p
+            color: $pcolor
+            font-size: 1rem
+            font-weight: 400
+            line-height: 1.5
+            margin-bottom: 0px
+
+.container_4
+    
