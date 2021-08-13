@@ -1,5 +1,6 @@
 $blue_color: #377dff
-$pcolor: #77838f
+$grey_color: #77838f
+$white_color: #fff
 
 @mixin container
     display: flex
@@ -20,7 +21,7 @@ $pcolor: #77838f
 
     a 
         text-decoration: none
-        color: #fff
+        color: $white_color
 
 .main
     font-family: Poppins, Helvetica, Arial, sans-serif
@@ -63,7 +64,7 @@ $pcolor: #77838f
         align-items: flex-start
         margin-bottom: 20px
         line-height: 1.5
-        color: #555C6B
+        color: $grey_color
         font-size: 20px
    
 
@@ -110,8 +111,6 @@ $pcolor: #77838f
     text-align: center
     margin-bottom: 10px
     
-   
-        
 .container_2
     @include container
     flex-direction: column
@@ -154,7 +153,7 @@ $pcolor: #77838f
     margin-bottom: 0
     margin-top: 0
     border: 0
-    border-top: 1px solid #e7eaf3
+    border-top: 1px solid $grey_color
     box-sizing: content-box
     height: 0
     overflow: visible
@@ -208,7 +207,7 @@ $pcolor: #77838f
    
     .div_li
         padding: 40px
-        border: solid 1px grey
+        border: solid 1px $grey_color
         display: flex
         flex-direction: row
         justify-content: center
@@ -217,11 +216,44 @@ $pcolor: #77838f
         box-sizing: border-box
 
         p
-            color: $pcolor
+            color: $grey_color
             font-size: 1rem
             font-weight: 400
             line-height: 1.5
             margin-bottom: 0px
 
 .container_4
-    
+    @include container
+    padding: 80px 15px
+    justify-content: center
+    flex-direction: row
+    border: 1px solid red
+
+.stickyBlock
+    width: 255px
+    padding: 0px 15px
+    background-color: $blue_color
+    margin-bottom: 0!important
+    position: sticky
+    top: 10px
+    border-radius: 5px
+
+    a
+        text-decoration: none
+        color: $white_color
+
+
+.txt_container_4
+    padding: 0px 15px
+    @include container
+    justify-content: center
+    flex-direction: column
+
+    h3
+        color: $blue_color
+        font-size: 35px
+        margin-bottom: 10px
+
+    .li_container
+        margin-bottom: 20px
+        border: solid 1px $grey_color

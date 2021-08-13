@@ -138,9 +138,9 @@ return (
             </div>
             </div>
         </div>
-        <hr className={styles.linehr}/> /*я не знаю почему они не отображаются */
+        <hr className={styles.linehr}/> 
         <div className={styles.container_4}>
-            <div className="nav">
+            <div className={styles.stickyBlock}>
                 <ul>
                     <li>
                         <a class="" href="#contests">Launching A Contest</a>
@@ -156,9 +156,9 @@ return (
                     </li>
                 </ul>
             </div>
-            <div className="">
-                <h3 className="">Launching A Contest</h3>
-                <div className="react?">
+            <div className={styles.txt_container_4}>
+                <h3>Launching A Contest</h3>
+                <div className={styles.li_container}>
                 </div>
                 <h3 className="">Buying From Marketplace</h3>
                 <div className="react?">
