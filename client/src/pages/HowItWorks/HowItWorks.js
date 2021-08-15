@@ -3,13 +3,26 @@ import { Link } from 'react-router-dom';
 //import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import CONSTANTS from '../../constants';
-//import SlideBar from '../../components/SlideBar/SlideBar';
 import Footer from '../../components/Footer/Footer';
 import styles from './HowItWorks.module.sass';
-//import carouselConstants from '../../carouselConstants';
-//import Spinner from '../../components/Spinner/Spinner';
+import faq from './faq.json';
 
-const howItWorks = (props) => {
+
+
+// const isOpen = props;
+
+const HowItWorks = (props) => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const faqLi = (lis) =>
+    lis.map ((elem) => (
+        <div>
+            <button onclick={() => setIsOpen(!isOpen)} className={styles.headerLi}>{elem.header}</button>
+            {isOpen && <div className={styles.bodyLi}>{elem.body}</div>}
+        </div>
+    ));
+
 return (
     <>
     <Header />  
@@ -159,6 +172,7 @@ return (
             <div className={styles.txt_container_4}>
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
+                    {faqLi(faq[0])}
                 </div>
                 <h3 className="">Buying From Marketplace</h3>
                 <div className="react?">
@@ -245,4 +259,13 @@ return (
 )
 };
 
-export default howItWorks;
+/* const mapStateToProps = (state) => {
+    const { isOpen } = state.userStore.data;
+    const { profileModeView } = state.userProfile;
+    const { error } = state.payment;
+    return isOpen
+  };
+
+export default  connect(mapStateToProps)(howItWorks); */
+
+export default  HowItWorks;
