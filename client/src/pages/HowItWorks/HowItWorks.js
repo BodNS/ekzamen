@@ -6,22 +6,11 @@ import CONSTANTS from '../../constants';
 import Footer from '../../components/Footer/Footer';
 import styles from './HowItWorks.module.sass';
 import faq from './faq.json';
+import FaqLi from '../../components/HowItWorks'
 
 
-
-// const isOpen = props;
 
 const HowItWorks = (props) => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const faqLi = (lis) =>
-    lis.map ((elem) => (
-        <div>
-            <button onclick={() => setIsOpen(!isOpen)} className={styles.headerLi}>{elem.header}</button>
-            {isOpen && <div className={styles.bodyLi}>{elem.body}</div>}
-        </div>
-    ));
 
 return (
     <>
@@ -172,7 +161,9 @@ return (
             <div className={styles.txt_container_4}>
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
-                    {faqLi(faq[0])}
+                    <ul>
+                        <FaqLi lis = {faq[0]} openLiIndex = {0}/>
+                    </ul>
                 </div>
                 <h3 className="">Buying From Marketplace</h3>
                 <div className="react?">
