@@ -11,7 +11,7 @@ import FaqLi from '../../components/HowItWorks'
 
 
 const HowItWorks = (props) => {
-
+    
 return (
     <>
     <Header />  
@@ -162,7 +162,7 @@ return (
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
                     <ul>
-                        <FaqLi lis = {faq[0]} openLiIndex = {0}/>
+                        <FaqLi lis = {faq[0]} />
                     </ul>
                 </div>
                 <h3 className="">Buying From Marketplace</h3>
