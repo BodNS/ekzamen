@@ -11,7 +11,14 @@ import FaqLi from '../../components/HowItWorks'
 
 
 const HowItWorks = (props) => {
-    
+  
+    const [openId, setOpenId] = useState(1);
+
+
+    const onButtonClick = (liId) => {
+       setOpenId({openId: openId === liId ? openId : liId})
+
+    }
 return (
     <>
     <Header />  
@@ -162,7 +169,29 @@ return (
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
                     <ul>
-                        <FaqLi lis = {faq[0]} />
+                        {/* <FaqLi lis = {faq[0]} /> */}
+                        <li key = {1}>
+                            <button onClick = {onButtonClick(1)} className={styles.headerLi}>Can I see any examples?</button>
+                         {openId === 1 &&  <div id="example1" className={styles.bodyLi}>
+                                Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                                <ul>
+                                    <li><a href="/Name-Ideas">Name Examples</a></li>
+                                    <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
+                                    <li><a href="/logo-design-examples">Logo Examples</a></li>
+                                </ul>
+                            </div>}
+                        </li>
+                        <li key = {2}>
+                        <button onClick = {onButtonClick(2)} className={styles.headerLi}>111Can I see any examples?</button>
+                         {openId === 2 &&    <div className={styles.bodyLi}>
+                                111Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                                <ul>
+                                    <li><a href="/Name-Ideas">Name Examples</a></li>
+                                    <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
+                                    <li><a href="/logo-design-examples">Logo Examples</a></li>
+                                </ul>
+                            </div> }
+                        </li>
                     </ul>
                 </div>
                 <h3 className="">Buying From Marketplace</h3>
