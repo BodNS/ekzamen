@@ -16,8 +16,7 @@ const HowItWorks = (props) => {
 
 
     const onButtonClick = (liId) => {
-       setOpenId({openId: openId === liId ? openId : liId})
-
+       setOpenId(openId === liId ? openId : liId)
     }
 return (
     <>
@@ -169,11 +168,11 @@ return (
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
                     <ul>
-                        {/* <FaqLi lis = {faq[0]} /> */}
-                        <li key = {1}>
-                            <button onClick = {onButtonClick(1)} className={styles.headerLi}>Can I see any examples?</button>
-                         {openId === 1 &&  <div id="example1" className={styles.bodyLi}>
-                                Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                        <FaqLi lis = {faq[0]} openId = {openId} onButtonClick={onButtonClick} />
+                        <li>
+                            <button onClick = {() => onButtonClick(4)} className={styles.headerLi}>Can I see any examples?</button>
+                         {openId === 4 &&  <div className={styles.bodyLi}>
+                                111Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
                                 <ul>
                                     <li><a href="/Name-Ideas">Name Examples</a></li>
                                     <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
@@ -181,15 +180,18 @@ return (
                                 </ul>
                             </div>}
                         </li>
-                        <li key = {2}>
-                        <button onClick = {onButtonClick(2)} className={styles.headerLi}>111Can I see any examples?</button>
-                         {openId === 2 &&    <div className={styles.bodyLi}>
-                                111Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
-                                <ul>
-                                    <li><a href="/Name-Ideas">Name Examples</a></li>
-                                    <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
-                                    <li><a href="/logo-design-examples">Logo Examples</a></li>
-                                </ul>
+                        <li >
+                        <button onClick = {() => onButtonClick(5)} className={styles.headerLi}>222Can I see any examples?</button>
+                         {openId === 5 &&    <div className={styles.bodyLi}>
+                                222ur creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                             
+                            </div> }
+                        </li>
+                        <li >
+                        <button onClick = {() => onButtonClick(3)} className={styles.headerLi}>333Can I see any examples?</button>
+                         {openId === 3 &&    <div className={styles.bodyLi}>
+                                333Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                             
                             </div> }
                         </li>
                     </ul>
