@@ -209,7 +209,7 @@ return (
                 </div>
                 <h3>Buying From Marketplace</h3>
                 <div className={styles.li_container}>
-                    
+                    <FaqLi lis = {faq[2]} openId = {openId} onButtonClick={onButtonClick} />
                 </div>
                 <h3 class="">Managed Contests</h3>
                 <div className="react?">
