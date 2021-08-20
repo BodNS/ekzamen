@@ -170,34 +170,46 @@ return (
                     <ul>
                         <FaqLi lis = {faq[0]} openId = {openId} onButtonClick={onButtonClick} />
                         <li>
-                            <button onClick = {() => onButtonClick(4)} className={styles.headerLi}>Can I see any examples?</button>
+                            <button onClick = {() => onButtonClick(4)} className={styles.headerLi}>What if I do not like any submissions?</button>
                          {openId === 4 &&  <div className={styles.bodyLi}>
-                                111Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                            While it is unusually rare that you will not like any names provided, we have a few options in case this problem occurs:
                                 <ul>
-                                    <li><a href="/Name-Ideas">Name Examples</a></li>
-                                    <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
-                                    <li><a href="/logo-design-examples">Logo Examples</a></li>
+                                    <li> If the contest ends and you have not yet found a name that you’d like to move forward with, we can provide complimentary extension of your contest as well as a complimentary consultation with one of our branding consultants (a $99 value). </li>
+
+                                    <li> By exploring our premium domain marketplace you can apply the contest award towards the purchase of any name listed for sale. </li>
+                                    <li>If you choose the Gold package or Platinum package and keep the contest as "Not Guaranteed", you can request a partial refund if you choose not to move forward with any name from you project. (Please note that the refund is for the contest award). Here is a link to our <a href="https://helpdesk.squadhelp.com/en/articles/115621-refund-policy" target="_blank">Refund Policy</a></li>
                                 </ul>
                             </div>}
                         </li>
-                        <li >
-                        <button onClick = {() => onButtonClick(5)} className={styles.headerLi}>222Can I see any examples?</button>
-                         {openId === 5 &&    <div className={styles.bodyLi}>
-                                222ur creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
-                             
-                            </div> }
+                        <li>
+                            <button onClick = {() => onButtonClick(5)} className={styles.headerLi}>How much does it cost?</button>
+                         {openId === 5 &&  <div className={styles.bodyLi}>
+                         Our naming competitions start at $299, and our logo design competitions start at $299. Also, there are three additional contest level that each offer more features and benefits. See our <a href="/squadhelp-pricing">Pricing Page</a> for details
+                            </div>}
                         </li>
-                        <li >
-                        <button onClick = {() => onButtonClick(3)} className={styles.headerLi}>333Can I see any examples?</button>
-                         {openId === 3 &&    <div className={styles.bodyLi}>
-                                333Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
-                             
-                            </div> }
+                        <li>
+                            <button onClick = {() => onButtonClick(6)} className={styles.headerLi}>I need both a Name and a Logo. Do you offer any discount for multiple contests?</button>
+                         {openId === 6 &&  <div className={styles.bodyLi}>
+                         Yes! We have many contest bundles - our most popular being our Name, Tagline, and Logo bundle. Bundles allow you to purchase multiple contests at one time and save as much as from $75 - $400. You can learn more about our bundle options on our <a href="/pricing.php?bundle-id=4">Pricing Page</a>.
+                            </div>}
+                        </li>
+                        <FaqLi lis = {faq[1]} openId = {openId} onButtonClick={onButtonClick} />
+                        <li>
+                            <button onClick = {() => onButtonClick(9)} className={styles.headerLi}>Can I see any examples?</button>
+                         {openId === 9 &&  <div className={styles.bodyLi}>
+                            Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
+                            <ul>
+                                <li><a href="/Name-Ideas">Name Examples</a></li>
+                                <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
+                                <li><a href="/logo-design-examples">Logo Examples</a></li>
+                            </ul>
+                            </div>}
                         </li>
                     </ul>
                 </div>
-                <h3 className="">Buying From Marketplace</h3>
-                <div className="react?">
+                <h3>Buying From Marketplace</h3>
+                <div className={styles.li_container}>
+                    
                 </div>
                 <h3 class="">Managed Contests</h3>
                 <div className="react?">
