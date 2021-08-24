@@ -35,11 +35,8 @@ const HowItWorks = (props) => {
             default:
                 break;
           }
-       
-       
-       
-       
     }
+    
 return (
     <>
     <Header />  
@@ -190,54 +187,20 @@ return (
                 <h3>Launching A Contest</h3>
                 <div className={styles.li_container}>
                     <ul>
-                        <FaqLi lis = {faq[0]} id={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
-                        <li>
-                            <button id="ul1" onClick = {() => onButtonClick(4)} className={styles.headerLi}>What if I do not like any submissions?</button>
-                         {openId1 === 4 &&  <div className={styles.bodyLi}>
-                            While it is unusually rare that you will not like any names provided, we have a few options in case this problem occurs:
-                                <ul>
-                                    <li> If the contest ends and you have not yet found a name that you’d like to move forward with, we can provide complimentary extension of your contest as well as a complimentary consultation with one of our branding consultants (a $99 value). </li>
-
-                                    <li> By exploring our premium domain marketplace you can apply the contest award towards the purchase of any name listed for sale. </li>
-                                    <li>If you choose the Gold package or Platinum package and keep the contest as "Not Guaranteed", you can request a partial refund if you choose not to move forward with any name from you project. (Please note that the refund is for the contest award). Here is a link to our <a href="https://helpdesk.squadhelp.com/en/articles/115621-refund-policy" target="_blank">Refund Policy</a></li>
-                                </ul>
-                            </div>}
-                        </li>
-                        <li>
-                            <button id="ul1" onClick = {() => onButtonClick(5)} className={styles.headerLi}>How much does it cost?</button>
-                         {openId1 === 5 &&  <div className={styles.bodyLi}>
-                         Our naming competitions start at $299, and our logo design competitions start at $299. Also, there are three additional contest level that each offer more features and benefits. See our <a href="/squadhelp-pricing">Pricing Page</a> for details
-                            </div>}
-                        </li>
-                        <li>
-                            <button id="ul1" onClick = {() => onButtonClick(6)} className={styles.headerLi}>I need both a Name and a Logo. Do you offer any discount for multiple contests?</button>
-                         {openId1 === 6 &&  <div className={styles.bodyLi}>
-                         Yes! We have many contest bundles - our most popular being our Name, Tagline, and Logo bundle. Bundles allow you to purchase multiple contests at one time and save as much as from $75 - $400. You can learn more about our bundle options on our <a href="/pricing.php?bundle-id=4">Pricing Page</a>.
-                            </div>}
-                        </li>
-                        <FaqLi lis = {faq[1]} id={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
-                        <li>
-                            <button id="ul1" onClick = {() => onButtonClick(9)} className={styles.headerLi}>Can I see any examples?</button>
-                         {openId1 === 9 &&  <div className={styles.bodyLi}>
-                            Our creatives have submitted more than 6 Million names and thousands of logos on our platform. Here are some examples of Names, Taglines, and Logos that were submitted in recent contests.
-                            <ul>
-                                <li><a href="/Name-Ideas">Name Examples</a></li>
-                                <li><a href="/tagline-slogan-ideas">Tagline Examples</a></li>
-                                <li><a href="/logo-design-examples">Logo Examples</a></li>
-                            </ul>
-                            </div>}
-                        </li>
+                        <FaqLi lis = {faq[0]} buttonId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
                     </ul>
                 </div>
                 <h3>Buying From Marketplace</h3>
                 <div className={styles.li_container}>
-                    <FaqLi lis = {faq[2]} id={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                    <FaqLi lis = {faq[1]} buttonId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
                 </div>
-                <h3 class="">Managed Contests</h3>
-                <div className="react?">
+                <h3>Managed Contests</h3>
+                <div className={styles.li_container}>
+                    <FaqLi lis = {faq[2]} buttonId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
                 </div>
-                <h3 class="">For Creatives</h3>
-                <div className="react?">
+                <h3>For Creatives</h3>
+                <div className={styles.li_container}>
+                    <FaqLi lis = {faq[3]} buttonId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
                 </div>
             </div>
         </div>
