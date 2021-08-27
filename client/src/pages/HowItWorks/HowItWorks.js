@@ -18,19 +18,19 @@ const HowItWorks = (props) => {
     const [openId4, setOpenId4] = useState(1);
 
 
-    const onButtonClick = (liId, pushedLi) => {
-        switch(pushedLi) {
+    const onButtonClick = (liId, pushedUl) => {
+        switch(pushedUl) {
             case 'ul1':  
-                setOpenId1(openId1 === liId ? openId1 : liId);
+                setOpenId1(openId1 === liId ? 0 : liId);
                 break;
             case 'ul2':  
-                setOpenId2(openId2 === liId ? openId2 : liId);
+                setOpenId2(openId2 === liId ? 0 : liId);
                 break;
             case 'ul3':  
-                setOpenId3(openId3 === liId ? openId3 : liId);
+                setOpenId3(openId3 === liId ? 0 : liId);
                 break;
             case 'ul4':  
-                setOpenId4(openId4 === liId ? openId4 : liId);
+                setOpenId4(openId4 === liId ? 0 : liId);
                 break;
             default:
                 break;
@@ -184,23 +184,34 @@ return (
                 </ul>
             </div>
             <div className={styles.txt_container_4}>
-                <h3>Launching A Contest</h3>
-                <div className={styles.li_container}>
-                    <ul>
-                        <FaqLi lis = {faq[0]} buttonId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
-                    </ul>
+                <div className={styles.ul_wrapper1}>
+                    <h3>Launching A Contest</h3>
+                    <div className={styles.li_container}>
+                        <ul>
+                            <FaqLi lis = {faq[0]} buttonId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
+                        </ul>
+                    </div>
                 </div>
-                <h3>Buying From Marketplace</h3>
-                <div className={styles.li_container}>
-                    <FaqLi lis = {faq[1]} buttonId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                <hr className={styles.linehr}/>
+                <div className={styles.ul_wrapper}>
+                    <h3>Buying From Marketplace</h3>
+                    <div className={styles.li_container}>
+                        <FaqLi lis = {faq[1]} buttonId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                    </div>
                 </div>
-                <h3>Managed Contests</h3>
-                <div className={styles.li_container}>
-                    <FaqLi lis = {faq[2]} buttonId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
+                <hr className={styles.linehr}/>
+                <div className={styles.ul_wrapper}>
+                    <h3>Managed Contests</h3>
+                    <div className={styles.li_container}>
+                        <FaqLi lis = {faq[2]} buttonId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
+                    </div>
                 </div>
-                <h3>For Creatives</h3>
-                <div className={styles.li_container}>
-                    <FaqLi lis = {faq[3]} buttonId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
+                <hr className={styles.linehr}/>
+                <div className={styles.ul_wrapper4}>
+                    <h3>For Creatives</h3>
+                    <div className={styles.li_container}>
+                        <FaqLi lis = {faq[3]} buttonId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
+                    </div>
                 </div>
             </div>
         </div>
