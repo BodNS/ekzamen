@@ -2,7 +2,7 @@ $blue_color: #377dff
 $grey_color: #77838f
 $white_color: #fff
 $black_color: #1e2022
-$background_button: #f8fafd
+$background_button: #e1e6ee
 
 @mixin container
     display: flex
@@ -274,12 +274,16 @@ $background_button: #f8fafd
         
     .ul_wrapper
         padding: 64px 0px
+        width: 100%
     
     .ul_wrapper1
         padding-bottom: 64px
+        border: 1px solid red
+        width: 100%
     
     .ul_wrapper4
         padding-top: 64px
+        width: 100%
 
 
 .li_container
@@ -292,6 +296,7 @@ $background_button: #f8fafd
     line-height: 1.5
     color: $black_color
     text-align: left
+    width: 100%
 
     li
         border: 3px solid $background_button
@@ -300,7 +305,6 @@ $background_button: #f8fafd
         
 .headerLi
     padding: 16px
-    flex-basis: auto
     background-color: $white_color
     border: none
     width: 100%
@@ -309,13 +313,26 @@ $background_button: #f8fafd
     &:hover
         background-color: $background_button
         color: $blue_color
+
+   
+    .arrow
+        color: $blue_color
+        transition: 0.3s ease-in-out
+        float: right
+        font-size: 20px
+        font-weight: 10 
+        transition: all 0.75s 0.25s
+        transform: rotate(0)
+
+    .rotate_arrow
+        transform: rotate(-90deg)
     
 .bodyLi
-    padding: 16px
+    paddcding: 16px
     border-top: 3px solid $background_button
     
     li
         list-style-type: disc
-        margin-left: 30px
+        margin-left: 3px
  
 

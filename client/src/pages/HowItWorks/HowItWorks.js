@@ -18,19 +18,26 @@ const HowItWorks = (props) => {
     const [openId4, setOpenId4] = useState(1);
 
 
-    const onButtonClick = (liId, pushedUl) => {
-        switch(pushedUl) {
-            case 'ul1':  
-                setOpenId1(openId1 === liId ? 0 : liId);
+    const onButtonClick = (event) => {
+
+        const button = event.target;
+        const arrow = button.querySelector("#arrow");
+
+        const liId = parseInt(button.parentElement.getAttribute("liId"));
+        const ulId = button.id;
+
+        switch(ulId) {
+            case 'ul1':
+                setOpenId1(openId1 === liId ? -1 : liId);
                 break;
-            case 'ul2':  
-                setOpenId2(openId2 === liId ? 0 : liId);
+            case 'ul2': 
+                setOpenId2(openId2 === liId ? -1 : liId);
                 break;
             case 'ul3':  
-                setOpenId3(openId3 === liId ? 0 : liId);
+                setOpenId3(openId3 === liId ? -1 : liId);
                 break;
             case 'ul4':  
-                setOpenId4(openId4 === liId ? 0 : liId);
+                setOpenId4(openId4 === liId ? -1 : liId);
                 break;
             default:
                 break;
@@ -188,7 +195,7 @@ return (
                     <h3>Launching A Contest</h3>
                     <div className={styles.li_container}>
                         <ul>
-                            <FaqLi lis = {faq[0]} buttonId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
+                            <FaqLi lis = {faq[0]} ulId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
                         </ul>
                     </div>
                 </div>
@@ -196,21 +203,21 @@ return (
                 <div className={styles.ul_wrapper}>
                     <h3>Buying From Marketplace</h3>
                     <div className={styles.li_container}>
-                        <FaqLi lis = {faq[1]} buttonId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                        <FaqLi lis = {faq[1]} ulId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
                     </div>
                 </div>
                 <hr className={styles.linehr}/>
                 <div className={styles.ul_wrapper}>
                     <h3>Managed Contests</h3>
                     <div className={styles.li_container}>
-                        <FaqLi lis = {faq[2]} buttonId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
+                        <FaqLi lis = {faq[2]} ulId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
                     </div>
                 </div>
                 <hr className={styles.linehr}/>
                 <div className={styles.ul_wrapper4}>
                     <h3>For Creatives</h3>
                     <div className={styles.li_container}>
-                        <FaqLi lis = {faq[3]} buttonId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
+                        <FaqLi lis = {faq[3]} ulId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
                     </div>
                 </div>
             </div>
