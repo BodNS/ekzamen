@@ -12,19 +12,38 @@ import FaqLi from '../../components/HowItWorks'
 
 const HowItWorks = (props) => {
   
-    const [openId1, setOpenId1] = useState(1);
-    const [openId2, setOpenId2] = useState(1);
-    const [openId3, setOpenId3] = useState(1);
-    const [openId4, setOpenId4] = useState(1);
+    const [openId1, setOpenId1] = useState(0);
+    const [openId2, setOpenId2] = useState(0);
+    const [openId3, setOpenId3] = useState(0);
+    const [openId4, setOpenId4] = useState(0);
 
+    const hideDiv = document.querySelectorAll('#hideDiv');
+        console.log(hideDiv);
+
+    const buttonOnCreate = document.getElementsByTagName("button");
+    console.log(buttonOnCreate);
+    const afterButtonOnCreate = buttonOnCreate.nextElementSibling;
+    console.log(afterButtonOnCreate);
+    // const arrowOnCreate = buttonOnCreate.querySelectorAll("#arrow");
+
+    /* if (!afterButtonOnCreate) {
+        arrowOnCreate.style.transform = 'rotate(-90deg)'
+    } else arrowOnCreate.style.transform = 'rotate(0)'  */
+        // document.getElementById('arrow').style.transform = 'rotate(-90deg)'
+   
 
     const onButtonClick = (event) => {
 
         const button = event.target;
         const arrow = button.querySelector("#arrow");
-
+        const afterButton = button.nextElementSibling;
+console.log(afterButton);
         const liId = parseInt(button.parentElement.getAttribute("liId"));
         const ulId = button.id;
+
+        if (!afterButton) {
+            arrow.style.transform = 'rotate(-90deg)'
+        } else arrow.style.transform = 'rotate(0)' 
 
         switch(ulId) {
             case 'ul1':

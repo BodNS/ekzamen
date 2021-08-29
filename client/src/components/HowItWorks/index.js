@@ -14,7 +14,7 @@ const FaqLi = (props) =>{
             <span id="arrow" className={styles.arrow}>&darr;</span>
         </button>
         { openId === liId && 
-            <div className={styles.bodyLi} dangerouslySetInnerHTML={{__html: elem.body}} ></div>
+            <div id="hideDiv" className={styles.bodyLi} dangerouslySetInnerHTML={{__html: elem.body}} ></div>
           }
     </li>
 ))
