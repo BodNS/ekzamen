@@ -4,7 +4,7 @@ import styles from '../../pages/HowItWorks/HowItWorks.module.sass';
 const FaqLi = (props) =>{
 
     const {lis, ulId, openId, onButtonClick} = props;
-   
+    
     return (
        
     lis.map ((elem, liId) => (
