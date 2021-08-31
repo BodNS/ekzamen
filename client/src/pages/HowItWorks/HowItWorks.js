@@ -17,34 +17,11 @@ const HowItWorks = (props) => {
     const [openId3, setOpenId3] = useState(0);
     const [openId4, setOpenId4] = useState(0);
 
-    const hideDiv = document.querySelectorAll('#hideDiv');
-        console.log(hideDiv);
-
-   
-
-    /* const buttonOnCreate = document.getElementsByTagName("button");
-    console.log(buttonOnCreate);
-    const afterButtonOnCreate = buttonOnCreate.nextElementSibling;
-    console.log(afterButtonOnCreate); */
-    // const arrowOnCreate = buttonOnCreate.querySelectorAll("#arrow");
-
-    /* if (!afterButtonOnCreate) {
-        arrowOnCreate.style.transform = 'rotate(-90deg)'
-    } else arrowOnCreate.style.transform = 'rotate(0)'  */
-        // document.getElementById('arrow').style.transform = 'rotate(-90deg)'
-   
-
     const onButtonClick = (event) => {
 
         const button = event.target;
-        const arrow = button.querySelector("#arrow");
-        const afterButton = button.nextElementSibling;
         const liId = parseInt(button.parentElement.getAttribute("liId"));
         const ulId = button.id;
-
-        // if (!afterButton) {
-        //     arrow.style.transform = 'rotate(-90deg)'
-        // } else arrow.style.transform = 'rotate(0)' 
 
         switch(ulId) {
             case 'ul1':
@@ -192,7 +169,7 @@ return (
             </div>
             </div>
         </div>
-        <hr className={styles.linehr}/> 
+        <hr /> 
         <div className={styles.container_4}>
             <div className={styles.stickyBlock}>
                 <ul>
@@ -224,7 +201,7 @@ return (
                     <h3>Buying From Marketplace</h3>
                     <div className={styles.li_container}>
                         <ul>
-                            <FaqLi lis = {faq[1]} hideDiv={hideDiv} ulId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                            <FaqLi lis = {faq[1]} ulId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
                         </ul>
                     </div>
                 </div>
@@ -248,35 +225,49 @@ return (
                 </div>
             </div>
         </div>
-        <div className="5">
-            <h3 class="">Ready to get started?</h3>
-            <p>
-                Fill out your contest brief and begin receiving custom name suggestions within minutes.
-            </p>
-            <a class="" href="/start-contest">Start A Contest</a>
-        </div>
-        <div className="6">
-            <div className="61">
-                <img />
+        <div className={styles.container_5}>
+            <div className={styles.container_5_img_left}>
+                <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/abstract-shapes-8.svg`} alt=""/>
+            </div>
+            <div className={styles.container_5_img_right}>
+                <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/abstract-shapes-5.svg`} alt=""/>
+            </div>
+            <div className={styles.txt_container_5}>
+                <h3 class="">Ready to get started?</h3>
                 <p>
-                    <span>4.9 out of 5 stars</span>
+                    Fill out your contest brief and begin receiving custom name suggestions within minutes.
+                </p>
+                <a class="" href="/start-contest">Start A Contest</a>
+            </div>
+        </div>
+        <div className={styles.container_6}>
+            <div className={styles.content_container_6}>
+                <div className={styles.img_container_6}>
+                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/stars.svg`} alt="star"/>
+                </div>
+                <p>
+                    <span>4.9 out of 5 stars </span>
                     from 25,000+ customers.
                 </p>
             </div>
-            <div className="62">
-                <img />
+            <div className={styles.content_container_6}>
+                <div className={styles.img_container_6}>
+                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/faces.png`} alt="faces"/>
+                </div>
                 <p>
                     Our branding community stands 
-                    <span class="bold">200,000+</span>
+                    <span> 200,000+ </span>
                     strong.
                 </p>
             </div>
-            <div className="63">
-                <img />
+            <div className={styles.content_container_6}>
+                <div className={styles.img_container_6}>
+                    <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/note.svg`} alt="note"/>
+                </div>
                 <p>
-                    <span class="text-dark font-weight-semi-bold">140+ Industries</span>
+                    <span>140+ Industries </span>
                     supported across more than
-                    <span class="text-dark font-weight-semi-bold">85 countries</span>
+                    <span> 85 countries </span>
                     <br/>
                     – and counting.
                 </p>

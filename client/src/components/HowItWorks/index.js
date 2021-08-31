@@ -11,10 +11,9 @@ const FaqLi = (props) =>{
     <li liId={liId} key = {liId}>
         <button id = {ulId} onClick={onButtonClick} className={styles.headerLi}>
             {elem.header}
-            <span id="arrow" className={styles.arrow}>&darr;</span>
         </button>
         { openId === liId && 
-            <div id="hideDiv" className={styles.bodyLi} dangerouslySetInnerHTML={{__html: elem.body}} ></div>
+            <div className={styles.bodyLi} dangerouslySetInnerHTML={{__html: elem.body}} ></div>
           }
     </li>
 ))
