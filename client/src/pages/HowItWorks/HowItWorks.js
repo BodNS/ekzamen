@@ -245,7 +245,7 @@ return (
                 <div className={styles.img_container_6}>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/stars.svg`} alt="star"/>
                 </div>
-                <p>
+                <p className={styles.with_after}>
                     <span>4.9 out of 5 stars </span>
                     from 25,000+ customers.
                 </p>
@@ -254,7 +254,7 @@ return (
                 <div className={styles.img_container_6}>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/faces.png`} alt="faces"/>
                 </div>
-                <p>
+                <p className={styles.with_after}>
                     Our branding community stands 
                     <span> 200,000+ </span>
                     strong.
@@ -264,7 +264,7 @@ return (
                 <div className={styles.img_container_6}>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/note.svg`} alt="note"/>
                 </div>
-                <p>
+                <p className={styles.without_after}>
                     <span>140+ Industries </span>
                     supported across more than
                     <span> 85 countries </span>
@@ -273,38 +273,48 @@ return (
                 </p>
             </div>
         </div>
-        <div className={styles.startContestContainer}>
-              <span className={styles.scctxt}>Ready to get started? Launch a contest and start receiving submissions instantly.</span>
-              <a className={styles.sccbtn} href="/start-contest">Start a Contest</a>
-        </div>
-        <div className="pricing_section">
-            <div className="left">
-                <div className="top">
-                    <h4 class="">Pay a Fraction of cost vs hiring an agency</h4>
-                    <p>
-                        For as low as $299, our naming contests and marketplace allow you to get an amazing brand quickly and affordably.
-                    </p>
+        <div className={styles.container_7}>
+            <div className={styles.wrapper_container_7}>
+                <div className={styles.left_container_7}>
+                    <div className={styles.top_left_container_7}>
+                        <span></span>
+                        <div>
+                            <h4>Pay a Fraction of cost vs hiring an agency</h4>
+                            <p>
+                                For as low as $299, our naming contests and marketplace allow you to get an amazing brand quickly and affordably.
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.bottom_left_container_7}>
+                        <span></span>
+                        <div>
+                            <h4>Satisfaction Guarantee</h4>
+                            <p>
+                                Of course! We have policies in place to ensure that you are satisfied with your experience. 
+                                <a href="#satisfactionGaurenteedModal"> Learn more</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className="bottom">
-                    <h4 class="">Satisfaction Guarantee</h4>
-                    <p>
-                        Of course! We have policies in place to ensure that you are satisfied with your experience. 
-                        <a href="#satisfactionGaurenteedModal" data-modal-target="#satisfactionGaurenteedModal" data-modal-effect="fadein">Learn more</a>
-                    </p>
-                </div>
-            </div>
-            <div className="right">
-                <h4 class="">Questions?</h4>
+                <div className={styles.right_container_7}>
+                <h4>Questions?</h4>
                 <p>
                      Speak with a Squadhelp platform expert to learn more and get your questions answered.
                 </p>
-                <button>
+                <button onClick="consaltClick" >
                     Schedule Consultation
                 </button>
-                <span>
-                    &nbsp; (877) 355-3585
-                </span>
-                <span className="">Call us for assistance</span>
+                <br/>
+                <br/>
+                <div className={styles.img_container_7}>
+                    <a href="#">
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/phone.svg`} alt="phone"/>
+                        &nbsp; (877) 355-3585
+                    </a>
+                </div>
+                <br/>
+                <span>Call us for assistance</span>
+            </div>
             </div>
         </div>
     </div>
@@ -313,13 +323,5 @@ return (
 )
 };
 
-/* const mapStateToProps = (state) => {
-    const { isOpen } = state.userStore.data;
-    const { profileModeView } = state.userProfile;
-    const { error } = state.payment;
-    return isOpen
-  };
-
-export default  connect(mapStateToProps)(howItWorks); */
 
 export default  HowItWorks;

@@ -5,6 +5,16 @@ $black_color: #1e2022
 $background_button: #e2e7f0
 $background_blue1: #2b2590
 $background_blue2: #1a97f7
+$grey_lines: rgba(30,32,34,.2)
+
+@mixin after_p
+    margin-top: 0
+    font-size: 1rem
+    font-weight: 400
+    text-align: center!important
+    display: inline-block
+    position: relative
+    
 
 @mixin container_5_img
     display: inline-block
@@ -424,16 +434,128 @@ $background_blue2: #1a97f7
         margin: 0px 91px 16px
         display: flex
        
-    p
-        margin-top: 0
-        font-size: 1rem
-        font-weight: 400
-        text-align: center!important
-        display: inline-block
+    .with_after
+        @include after_p
+
+        &::after
+            position: absolute
+            right: -.9375rem
+            top: 50%
+            height: 4rem
+            border-left: 1px solid rgba(30,32,34,.2)
+            content: ""
+            margin-top: -2rem
+            transform: rotate(15deg)
+
+    .without_after
+        @include after_p
 
     span
-        font-weight: 600!important
-        color: #1e2022!important
+            font-weight: 600!important
+            color: #1e2022!important
+
+.container_7
+    width: 1110px
+    height: 500px
+    padding: 32px 15px
+    margin: 30px
+
+.wrapper_container_7
+    margin-bottom: 80px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    position: relative
+
+    p
+        font-size: 14px
+        font-weight: 400      
+
+.left_container_7
+    border-radius: 2px
+    box-shadow: 0 10px 40px 10px rgba(140,152,164,.175)!important
+    padding: 64px
+    width: 60%
+    height: 100%
+
+    h4
+        font-weight: 500
+        margin-bottom: 4px
+        font-size: 18px
+
+    p
+        margin-bottom: 16px
+        text-align: left
+        display: inline-block
+
+    span::before
+        margin-right: 16px
+        content: "\003E"
+        color: $blue_color
+        border-radius: 50%
+        border: 0 solid #e5e7eb
+        background: rgba(55,125,255,.1)
+        border-color: transparent
+        padding: 9px
+        font-size: 12px
+        font-weight: 900
+
+    .top_left_container_7
+        display: flex
+        flex-direction: row
+        padding-bottom: 16px
+
+    .bottom_left_container_7
+        display: flex
+        flex-direction: row
+        border-top: 1px solid $grey_lines
+        padding-top: 32px
 
 
+.right_container_7
+    background-color: $blue_color
+    padding: 64px
+    width: 40%
+    height: 100%
+    color: $white_color
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: baseline
 
+    h4
+        margin-bottom: 4px
+        font-size: 28px
+        font-weight: 300
+        line-height: 1.5
+
+    p 
+        margin-bottom: 16px
+        color: $white_color!important
+        font-weight: 400
+        font-size: 14px
+
+    button
+        padding: 12px 16px
+        color: $blue_color
+        background: $white_color
+        border-radius: 15px
+        border-color: $white_color
+        font-size: 14px
+        font-weight: 500
+        text-align: center
+        vertical-align: middle
+        
+        &:hover
+            transform: translateY(-3px)
+            transition: all 0.2s ease-in-out
+
+    a
+        color: $white_color
+
+        &:hover
+            color: $grey_color
+
+   
+            
