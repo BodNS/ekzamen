@@ -197,12 +197,8 @@ $grey_lines: rgba(30,32,34,.2)
 .linehr
     margin-bottom: 0
     margin-top: 0
-    border: 0
     border-top: 1px solid $grey_color
-    box-sizing: content-box
-    height: 0
-    overflow: visible
-
+    height: 1px
 
 .container_3
     @include container
@@ -332,7 +328,7 @@ $grey_lines: rgba(30,32,34,.2)
     width: 100%
 
     li
-        border: 3px solid $background_button
+        border: 1px solid $background_button
         border-radius: 2px
         margin-bottom: 20px
         
@@ -342,14 +338,15 @@ $grey_lines: rgba(30,32,34,.2)
     border: none
     width: 100%
     text-align: left
+    border: 1px solid $background_button
     
     &:hover
-        background-color: $background_button
+        background-color: rgba(238, 242, 247, 0.2)
         color: $blue_color
    
 .bodyLi
     padding: 16px
-    border-top: 3px solid $background_button
+    border-top: 1px solid $background_button
     
     ul
         list-style-type: disc
@@ -456,9 +453,8 @@ $grey_lines: rgba(30,32,34,.2)
 
 .container_7
     width: 1110px
-    height: 500px
     padding: 32px 15px
-    margin: 30px
+    margin: 0px 30px
 
 .wrapper_container_7
     margin-bottom: 80px
@@ -477,7 +473,6 @@ $grey_lines: rgba(30,32,34,.2)
     box-shadow: 0 10px 40px 10px rgba(140,152,164,.175)!important
     padding: 64px
     width: 60%
-    height: 100%
 
     h4
         font-weight: 500
@@ -517,7 +512,6 @@ $grey_lines: rgba(30,32,34,.2)
     background-color: $blue_color
     padding: 64px
     width: 40%
-    height: 100%
     color: $white_color
     display: flex
     flex-direction: column
@@ -555,7 +549,38 @@ $grey_lines: rgba(30,32,34,.2)
         color: $white_color
 
         &:hover
-            color: $grey_color
+            color: $grey_lines
 
+.container_8
+    padding: 0px 15px
+    width: 1110px
+    margin-bottom: 24px
+    display: flex
+    flex-direction: row
+
+    h6
+        padding: 32px 15px 0px 24px
+        margin-bottom: 8px
+        font-weight: 500
+        font-size: 28px
+
+.txt_container_8
+    width: 30%
+
+.img_container_8
+    border-top: 1px solid $grey_lines
+    padding: 32px 15px 0px 
+    width: 70% 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+
+    img
+        width: 96px
+
+    div
+        padding: 0px 15px
+        margin: 0px 8px
    
             

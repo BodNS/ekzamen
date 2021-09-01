@@ -127,7 +127,7 @@ return (
                 </div>
 `            </div>
         </div>
-        <hr className={styles.linehr}/>
+        <div className={styles.linehr}></div>
         <div className={styles.container_3}>
             <div className={styles.title_container_3}>
                 <div className={styles.card_pict}>
@@ -315,6 +315,33 @@ return (
                 <br/>
                 <span>Call us for assistance</span>
             </div>
+            </div>
+        </div>
+        <div className={styles.container_8}>
+            <div className={styles.txt_container_8}>
+                <h6>Featured In</h6>
+            </div>  
+            <div className={styles.img_container_8}>
+                <div>
+                    <a href="#" target="_blank">
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/forbes.svg`} alt="forbes"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" target="_blank">
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/tnw.svg`} alt="tnw"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" target="_blank">
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/chicago.svg`} alt="chicago"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="#" target="_blank">
+                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/Mashable.svg`} alt="Mashable"/>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
