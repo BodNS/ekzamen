@@ -195,7 +195,7 @@ $grey_lines: #e7eaf3
     @include blue_btn
     margin-bottom: 0px !important
 
-.linehr
+.line_hr
     margin-bottom: 0 !important
     margin-top: 0 !important
     border: 0
@@ -362,14 +362,12 @@ $grey_lines: #e7eaf3
     .ul_wrapper
         padding: 64px 0px
         width: 100%
-    
-    .ul_wrapper1
-        padding-bottom: 64px
-        width: 100%
-    
-    .ul_wrapper4
-        padding-top: 64px
-        width: 100%
+
+        &:first-child
+            padding-top: 0px
+
+        &:last-child
+            padding-bottom: 0px
 
 .li_container
     list-style-type: none
@@ -387,6 +385,7 @@ $grey_lines: #e7eaf3
         border: 1px solid $background_button
         border-radius: 2px
         margin-bottom: 20px
+
         
 .headerLi
     padding: 16px
@@ -395,11 +394,36 @@ $grey_lines: #e7eaf3
     width: 100%
     text-align: left
     border: 1px solid $background_button
-    
+    display: inline-block
+    position: relative
+
     &:hover
         background-color: rgba(238, 242, 247, 0.2)
         color: $blue_color
-   
+
+    
+.arrow
+    color: $blue_color
+    float: right
+    font-size: 20px
+    font-weight: 900
+    transition: 0.3s ease-in-out
+
+.rotate_arrow 
+    transform: rotate(-90deg)
+    transform-origin: 0 0 0
+    color: red
+    font-size: 20px
+    font-weight: 900
+    transition: 0.3s ease-in-out
+    height: 10px
+    width: 10px
+    margin-left: 90%
+    position: absolute
+    top: 50%
+    margin-top: 5px
+    
+
 .bodyLi
     padding: 16px
     border-top: 1px solid $background_button

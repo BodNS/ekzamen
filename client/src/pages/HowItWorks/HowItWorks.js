@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 //import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
@@ -7,8 +7,6 @@ import Footer from '../../components/Footer/Footer';
 import styles from './HowItWorks.module.sass';
 import faq from './faq.json';
 import FaqLi from '../../components/HowItWorks'
-
-
 
 const HowItWorks = (props) => {
   
@@ -127,7 +125,7 @@ return (
                 </div>
 `            </div>
         </div>
-        <hr className={styles.linehr} />
+        <hr className={styles.line_hr} />
         <div className={styles.container_3}>
             <div className={styles.title_container_3}>
                 <div className={styles.card_pict}>
@@ -169,7 +167,7 @@ return (
             </div>
             </div>
         </div>
-        <hr className={styles.linehr} />
+        <hr className={styles.line_hr} />
         <div className={styles.container_4}>
             <div className={styles.stickyBlock}>
                 <ul>
@@ -188,41 +186,13 @@ return (
                 </ul>
             </div>
             <div className={styles.txt_container_4}>
-                <div className={styles.ul_wrapper1}>
-                    <h3>Launching A Contest</h3>
-                    <div className={styles.li_container}>
-                        <ul>
-                            <FaqLi lis = {faq[0]} ulId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
-                        </ul>
-                    </div>
-                </div>
-                <hr className={styles.linehr}/>
-                <div className={styles.ul_wrapper}>
-                    <h3>Buying From Marketplace</h3>
-                    <div className={styles.li_container}>
-                        <ul>
-                            <FaqLi lis = {faq[1]} ulId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
-                        </ul>
-                    </div>
-                </div>
-                <hr className={styles.linehr}/>
-                <div className={styles.ul_wrapper}>
-                    <h3>Managed Contests</h3>
-                    <div className={styles.li_container}>
-                        <ul>
-                            <FaqLi lis = {faq[2]} ulId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
-                        </ul>
-                    </div>
-                </div>
-                <hr className={styles.linehr}/>
-                <div className={styles.ul_wrapper4}>
-                    <h3>For Creatives</h3>
-                    <div className={styles.li_container}>
-                        <ul>
-                            <FaqLi lis = {faq[3]} ulId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
-                        </ul>
-                    </div>
-                </div>
+                <FaqLi lis = {faq[0]} h3={"Launching A Contest"} ulId={"ul1"} openId = {openId1} onButtonClick={onButtonClick} />
+                <hr className={styles.line_hr}/>
+                <FaqLi lis = {faq[1]} h3={"Buying From Marketplace"} ulId={"ul2"} openId = {openId2} onButtonClick={onButtonClick} />
+                <hr className={styles.line_hr}/>
+                <FaqLi lis = {faq[2]} h3={"Managed Contests"} ulId={"ul3"} openId = {openId3} onButtonClick={onButtonClick} />
+                <hr className={styles.line_hr}/>
+                <FaqLi lis = {faq[3]} h3={"For Creatives"} ulId={"ul4"} openId = {openId4} onButtonClick={onButtonClick} />
             </div>
         </div>
         <div className={styles.container_5}>
