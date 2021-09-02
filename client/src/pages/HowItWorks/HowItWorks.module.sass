@@ -5,7 +5,7 @@ $black_color: #1e2022
 $background_button: #e2e7f0
 $background_blue1: #2b2590
 $background_blue2: #1a97f7
-$grey_lines: rgba(30,32,34,.2)
+$grey_lines: #e7eaf3
 
 @mixin after_p
     margin-top: 0
@@ -85,12 +85,10 @@ $grey_lines: rgba(30,32,34,.2)
         font-size: 22px
 
     hr
-        color: #333
-        border: none
-        border-top: 3px double #333
+        box-sizing: content-box
+        width: 100%
+        height: 0
         overflow: visible
-        text-align: center
-        height: 5px
 
     p
         display: flex
@@ -154,7 +152,7 @@ $grey_lines: rgba(30,32,34,.2)
 
 .wrap_blue_name_2
     text-align: center
-    margin-bottom: 10px
+    margin-bottom: 30px
     
 .container_2
     @include container
@@ -165,24 +163,23 @@ $grey_lines: rgba(30,32,34,.2)
 .txt_container_2
     margin: 0px 93px 80px
 
-.card_container
+.card_container_main
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: stretch
-    height: 700px
     
     p
         margin-bottom: 20px
         text-align: center
 
-.card
-    border: 1px solid grey
+.card_container_2
+    border: 1px solid $grey_lines
     margin: 0px 18px
     padding: 80px 20px
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: flex-start
     align-items: center
 
     h3
@@ -194,11 +191,15 @@ $grey_lines: rgba(30,32,34,.2)
     weight: 90px
     margin-bottom: 10px    
 
+.btn_container_2
+    @include blue_btn
+    margin-bottom: 0px !important
+
 .linehr
-    margin-bottom: 0
-    margin-top: 0
-    border-top: 1px solid $grey_color
-    height: 1px
+    margin-bottom: 0 !important
+    margin-top: 0 !important
+    border: 0
+    border-top: 1px solid $grey_lines
 
 .container_3
     @include container
@@ -226,7 +227,7 @@ $grey_lines: rgba(30,32,34,.2)
     height: 550px
     padding-right: 48px  
 
-.pict_and_spisok_container_3
+.content_container_3
     display: flex
     justify-content: center
     flex-direction: row
@@ -238,8 +239,49 @@ $grey_lines: rgba(30,32,34,.2)
 
     ul
         margin-bottom: 20px
+        
     li
         padding: 20px 0px 20px 50px
+        position: relative
+
+        &:first-child::after
+            position: absolute
+            bottom: 0
+            right: 0
+            left: -.3125rem
+            width: .0625rem
+            height: 100%
+            border-right: 1px solid $grey_lines
+            margin: auto auto auto 0
+            content: ""
+            height: 50%
+            top: auto
+
+        &:last-child::after
+            position: absolute
+            top: 0
+            bottom: auto
+            right: 0
+            left: -.3125rem
+            width: .0625rem
+            height: 50%
+            border-right: 1px solid $grey_lines
+            margin: auto auto auto 0
+            content: ""
+
+        &:nth-child(2)::after, &:nth-child(3)::after
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: -.3125rem
+            width: .0625rem
+            border-right: 1px solid $grey_lines
+            margin: auto auto auto 0
+            content: ""
+            height: 100%
+        
+
     span
         color: $blue_color
         font-size: 3.5rem
@@ -248,13 +290,27 @@ $grey_lines: rgba(30,32,34,.2)
    
     .div_li
         padding: 40px
-        border: solid 1px $grey_color
+        border: solid 1px $grey_lines
         display: flex
         flex-direction: row
         justify-content: center
         align-items: center
         width: 500px
         box-sizing: border-box
+
+        &::before
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: -.25rem
+            width: 2rem
+            height: .0625rem
+            border-top: 1px solid $grey_lines
+            margin: auto auto auto 0
+            content: ""
+
+       
 
         p
             color: $grey_color
@@ -439,7 +495,7 @@ $grey_lines: rgba(30,32,34,.2)
             right: -.9375rem
             top: 50%
             height: 4rem
-            border-left: 1px solid rgba(30,32,34,.2)
+            border-left: 1px solid $grey_lines
             content: ""
             margin-top: -2rem
             transform: rotate(15deg)
