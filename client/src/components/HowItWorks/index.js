@@ -10,20 +10,27 @@ const FaqLi = (props) =>{
             <h3>{h3}</h3>
             <div className={styles.li_container}>
                 <ul>
-                {lis.map ((elem, liId) => (
+                {lis.map ((elem, liId) => {
+                    const toBeOrNotToBe = openId === liId;
+                
+                return (
                     <li liId={liId} key = {liId}>
                         <button id = {ulId} onClick={onButtonClick} className={styles.headerLi}>
                             {elem.header}
-                        <div className={styles[openId === liId ?  'rotate_arrow' : 'arrow']}>&darr;</div>
+                            <span className={styles[toBeOrNotToBe ?  'arrow_open' : 'arrow_close']}></span>
                         </button>
-                        { openId === liId && 
+                        {  toBeOrNotToBe && 
                             <div className={styles.bodyLi} dangerouslySetInnerHTML={{__html: elem.body}} ></div>
                             }
                     </li>
-                ))}
+                )}
+                )}
                 </ul>
         </div>
     </div>
 )}
 
-    export default FaqLi;
+export default FaqLi;
+
+
+                      
