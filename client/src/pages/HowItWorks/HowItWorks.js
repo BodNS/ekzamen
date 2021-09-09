@@ -74,7 +74,7 @@ return (
             
                 <p>Squadhelp offers 3 ways to get you a perfect name for your business.</p>
             </div>
-            <div className={styles.card_container_main}>
+            <div className={styles.main_card_container_2}>
                 <div className={styles.card_container_2}>
                     <div className={styles.card_pict}>
                         <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/icon-7.svg`} alt="Card Image"/>

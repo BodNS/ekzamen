@@ -45,6 +45,8 @@ $grey_lines: #e7eaf3
     display: flex
     align-items: center
     width: 1110px
+    
+   
  
 @mixin blue_btn
     background: $blue_color
@@ -52,6 +54,10 @@ $grey_lines: #e7eaf3
     padding: 15px 20px
     margin-bottom: 80px 
     font-size: 20px
+    display: inline-block
+    font-weight: 500
+    text-align: center
+    vertical-align: middle
 
     &:hover
         transform: translateY(-3px)
@@ -61,15 +67,19 @@ $grey_lines: #e7eaf3
     a 
         text-decoration: none
         color: $white_color    
+* 
+    box-sizing: border-box
 
 .main
     font-family: Poppins, Helvetica, Arial, sans-serif
-    color: #1e2022
+    color: $black_color
     box-sizing: border-box
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    @media (max-width: 720px)
+        width: viewport
 
     img
         weight: inherit
@@ -128,6 +138,12 @@ $grey_lines: #e7eaf3
     flex-direction: row
     justify-content: flex-start
     padding: 40px 15px
+    @media (max-width: 720px)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        width: inherit
 
     .txt_container_1
         display: flex
@@ -140,11 +156,13 @@ $grey_lines: #e7eaf3
         weight: 445px
         margin: 0px 30px
         padding: 0 15px
+        @media (max-width: 720px)
+            display: none
     
 
 .video_btn
     @include blue_btn
-    width: 100px
+    width: 150px
 
 .btn
     @include blue_btn
@@ -171,19 +189,33 @@ $grey_lines: #e7eaf3
     flex-direction: column
     justify-content: center
     padding: 40px 15px
+    @media (max-width:  720px)
+        width: inherit
+        display: flex
+        
 
 .txt_container_2
     margin: 0px 93px 80px
+    
 
-.card_container_main
+.main_card_container_2
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: stretch
+    @media (max-width:  720px)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: stretch
+        height: 1500px
+        width: inherit
+            
     
     p
         margin-bottom: 20px
         text-align: center
+
 
 .card_container_2
     border: 1px solid $grey_lines
@@ -214,6 +246,7 @@ $grey_lines: #e7eaf3
     border-top: 1px solid $grey_lines
 
 .container_3
+    display: flex
     @include container
     justify-content: center
     flex-direction: column
@@ -245,6 +278,12 @@ $grey_lines: #e7eaf3
     flex-direction: row
     align-items: center
     margin: 0px -15px
+    @media (max-width: 720px)
+        display: flex
+        flex-direction: column-reverse
+        justify-content: flex-start
+        align-items: flex-start
+        width: 100%
 
 .spisok_container_3
     padding: 0px 15px
@@ -337,6 +376,13 @@ $grey_lines: #e7eaf3
     justify-content: center
     flex-direction: row
     align-items: flex-start
+    @media (max-width: 720px)
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        width: 100%
+        
 
 .stickyBlock
     width: 25%
@@ -345,6 +391,11 @@ $grey_lines: #e7eaf3
     position: sticky
     top: 50px
     border-radius: 5px
+    @media ( max-width:  720px)
+        position: relative
+        width: 100%
+        padding: 0px 15px
+        margin-bottom: 70px
 
     ul
         padding: 16px 32px
