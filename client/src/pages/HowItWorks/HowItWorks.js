@@ -65,7 +65,7 @@ return (
              
         </div>
         <div className={styles.container_2}>
-            <div className={styles.txt_container_2}>
+            <div className={styles.title_container_2}>
             <div className={styles.wrap_blue_name_2}>
                 <span class={styles.blue_name}>Our Services</span>
             </div>
@@ -134,7 +134,7 @@ return (
                 <h2>How Do Naming Contests Work?</h2>
             </div>
             <div className={styles.content_container_3}>
-                <div className={styles.pict_container_3}>
+                <div className={styles.img_container_3}>
                     <img src={`${CONSTANTS.STATIC_IMAGES_PATH}HIW/support-man.svg`} alt="Card Image"/>
                 </div>
                 <div className={styles.spisok_container_3}>
