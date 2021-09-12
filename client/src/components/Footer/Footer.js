@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styles from './Footer.module.sass';
 import CONSTANTS from '../../constants';
+import { Link, withRouter} from 'react-router-dom';
 
 class Footer extends Component {
     topFooterItemsRender = (item) => (
       <div key={item.title}>
         <h4>{item.title}</h4>
-        {item.items.map((i) => <a key={i} href="https://google.com">{i}</a>)}
+        {item.items.map((i) => <a key={i}>{i}</a>)}
       </div>
     );
 
@@ -20,6 +21,11 @@ class Footer extends Component {
           <div className={styles.footerTop}>
             <div>
               {this.topFooterRender()}
+              <div><Link
+                          to="/events"
+                          style={{ textDecoration: 'none' }}>
+                          <span>Events</span>
+                   </Link></div>
             </div>
           </div>
         </div>
@@ -27,4 +33,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default withRouter(Footer);

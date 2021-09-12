@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
-//import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import CONSTANTS from '../../constants';
 import Footer from '../../components/Footer/Footer';
