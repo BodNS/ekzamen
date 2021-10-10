@@ -3,14 +3,17 @@ import styles from '../../pages/Events/Events.module.sass';
 import AddEventForm from '../../components/Events';
 
 const Events = (props) => { 
-    const addEvent = () => {
+    
+    const localStorageValue = JSON.parse(localStorage.getItem("eventsList")) ?? [];
 
+    const addEvent = () => {
+        document.querySelector("#form").style.display = "flex";
     }
 
     return (
-<div>
+<div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
-    <AddEventForm />
+    <AddEventForm localStorageValue={localStorageValue}/>
 </div>
     )}
 
