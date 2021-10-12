@@ -35,6 +35,10 @@ const AddEventForm = (props) => {
             document.querySelector("#form").style.display = "none";
             }
           }
+          onReset={(values, { resetForm }) => {
+            console.log('Reset');
+            resetForm();
+          }}
         >
           <Form id="form" className = {styles.formStyle} >
             <label htmlFor="event">Add event</label>
@@ -53,6 +57,7 @@ const AddEventForm = (props) => {
             <br/>
     
             <button type="submit">Add event</button>
+            <button type="reset">Cancel</button>
           </Form>
         </Formik>
       );
