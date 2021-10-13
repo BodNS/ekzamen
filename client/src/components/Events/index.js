@@ -1,3 +1,5 @@
-import AddEventForm from './Events';
+import AddEventForm from './AddEventForm';
+import EventsList from './EventsList';
 
-export default AddEventForm;
+export {AddEventForm, EventsList};
+ 

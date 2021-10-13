@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
 import styles from '../../pages/Events/Events.module.sass';
-import AddEventForm from '../../components/Events';
+import {AddEventForm, EventsList} from '../../components/Events';
 
-const Events = (props) => { 
+const EventsPage = (props) => { 
     
     const localStorageValue = JSON.parse(localStorage.getItem("eventsList")) ?? [];
 
@@ -14,7 +14,10 @@ const Events = (props) => {
 <div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
     <AddEventForm localStorageValue={localStorageValue}/>
+    <p>Events list </p>
+    <EventsList eventsList={localStorageValue} />
+   
 </div>
     )}
 
-export default  Events;
+export default  EventsPage;

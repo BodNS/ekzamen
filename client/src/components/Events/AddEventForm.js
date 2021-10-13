@@ -35,9 +35,8 @@ const AddEventForm = (props) => {
             document.querySelector("#form").style.display = "none";
             }
           }
-          onReset={(values, { resetForm }) => {
-            console.log('Reset');
-            resetForm();
+          onReset={(_, {}) => {
+            document.querySelector("#form").style.display = "none";
           }}
         >
           <Form id="form" className = {styles.formStyle} >
@@ -55,9 +54,11 @@ const AddEventForm = (props) => {
             <Field name="warnFor" type="datetime-local" />
             <ErrorMessage name="warnFor" />
             <br/>
-    
-            <button type="submit">Add event</button>
-            <button type="reset">Cancel</button>
+          
+            <div className={styles.formBtn}>
+              <button type="submit">Add event</button>
+              <button type="reset">Cancel</button>
+            </div>
           </Form>
         </Formik>
       );
