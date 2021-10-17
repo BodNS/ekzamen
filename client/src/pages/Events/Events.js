@@ -14,7 +14,6 @@ const EventsPage = (props) => {
 <div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
     <AddEventForm localStorageValue={localStorageValue}/>
-    <p>Events list </p>
     <EventsList eventsList={localStorageValue} />
    
 </div>

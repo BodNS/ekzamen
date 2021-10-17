@@ -21,11 +21,6 @@ class Footer extends Component {
           <div className={styles.footerTop}>
             <div>
               {this.topFooterRender()}
-              <div><Link
-                          to="/events"
-                          style={{ textDecoration: 'none' }}>
-                          <span>Events</span>
-                   </Link></div>
             </div>
           </div>
         </div>

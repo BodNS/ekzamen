@@ -132,7 +132,13 @@ class Header extends React.Component {
                           style={{ textDecoration: 'none' }}>
                           <span>HOW IT WORKS</span>
                        </Link>
-                        </li>
+                      </li>
+                      <li><Link
+                          to="/events"
+                          style={{ textDecoration: 'none' }}>
+                          <span>Events</span>
+                        </Link>
+                      </li>
                       <li><a href="http://www.google.com">PRICING</a></li>
                       <li><a href="http://www.google.com">AGENCY SERVICE</a></li>
                       <li><a href="http://www.google.com">ACTIVE CONTESTS</a></li>
