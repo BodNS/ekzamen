@@ -8,18 +8,23 @@ export const formValuesToLocalStorage = (values, localStorageValue) => {
     localStorage.setItem('eventsList', JSON.stringify(localStorageValue));
 }
 
-export const getTimeRemaining = (endTime) => {
-    const total = Date.parse(endTime) - Date.now();
+export const getTimeRemaining = (total) => {
+    // const total = Date.parse(endTime) - Date.now();
     const seconds = Math.floor( (total/1000) % 60 );
     const minutes = Math.floor( (total/1000/60) % 60 );
     const hours = Math.floor( (total/(1000*60*60)) % 24 );
     const days = Math.floor( total/(1000*60*60*24) );
 
     return {
-        total,
+        // total,
         days,
         hours,
         minutes,
         seconds
     };
+}
+
+export const deleteEvent = (eventsList, index) => {
+    eventsList.splice(index, 1);
+    localStorage.setItem('eventsList', JSON.stringify(eventsList));
 }
