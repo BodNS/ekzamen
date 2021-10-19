@@ -6,15 +6,17 @@ const EventItem = (props) => {
 
     const {item, index, deleteEvent} = props;
 
-    const [timeLeft, setTimeLeft] = useState(() => Date.parse(item.warnFor) - Date.now());
+    const [timeLeft, setTimeLeft] = useState(Date.parse(item.warnFor) - Date.now());
     
+
     const alertTime = getTimeRemaining(timeLeft);
+    console.log(item.event, item.warnFor, Date.parse(item.warnFor) - Date.now(), timeLeft, alertTime);
 
     useEffect(() => {
         if (timeLeft <= 0) {
             // deleteEvent(index);
         return alert(`Событие ${item.event} произошло!`)}
-        const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 1000)
+        const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 5000)
         return () => clearInterval(timerId);
     });
 

@@ -4,27 +4,24 @@ import {AddEventForm, EventsList} from '../../components/Events';
 
 const EventsPage = (props) => { 
 
-    /* const [localStorageValue, setLocalStorageValue] = useState(() => JSON.parse(localStorage.getItem("eventsList")) ?? []);
-    
-    const getLocalStorageValue = () =>
-        setLocalStorageValue (JSON.parse(localStorage.getItem("eventsList")) ?? []) */
+    const [updateEventList, setUpdateEventList] = useState(0);
 
+    const updEventListFn = (count) => setUpdateEventList (updateEventList + count);
+    
     const localStorageValue = JSON.parse(localStorage.getItem("eventsList")) ?? [];    
 
     const addEvent = () => {
         document.querySelector("#form").style.display = "flex";
     }
 
-    /* useEffect(() => {
-        window.addEventListener('storage', getLocalStorageValue);
-        getLocalStorageValue ();
-        return () => window.removeEventListener("storage", getLocalStorageValue); 
-    }, [localStorageValue]) */
+    useEffect(() => {
+        
+    }, [updateEventList])
 
     return (
 <div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
-    <AddEventForm localStorageValue={localStorageValue}  />
+    <AddEventForm localStorageValue={localStorageValue}  updEventListFn={updEventListFn}/>
     <EventsList eventsList={localStorageValue} />
    
 </div>

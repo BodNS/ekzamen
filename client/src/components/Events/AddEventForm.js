@@ -6,7 +6,7 @@ import {formatDate, formValuesToLocalStorage} from './functions';
 
 const AddEventForm = (props) => {
   
-  const {localStorageValue} = props;
+  const {localStorageValue, updEventListFn} = props;
 
     return (
         <Formik
@@ -33,6 +33,7 @@ const AddEventForm = (props) => {
             resetForm();
             alert('Event added!');
             document.querySelector("#form").style.display = "none";
+            updEventListFn(1);
             }
           }
           onReset={(_, {}) => {
