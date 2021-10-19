@@ -15,7 +15,7 @@ const EventsPage = (props) => {
     }
 
     useEffect(() => {
-        
+        console.log('dd');
     }, [updateEventList])
 
     return (
