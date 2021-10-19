@@ -33,7 +33,7 @@ const AddEventForm = (props) => {
             resetForm();
             alert('Event added!');
             document.querySelector("#form").style.display = "none";
-            updEventListFn(1);
+            updEventListFn((prev) => prev + 1);
             }
           }
           onReset={(_, {}) => {

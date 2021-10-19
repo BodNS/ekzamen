@@ -24,7 +24,8 @@ export const getTimeRemaining = (total) => {
     };
 }
 
-export const deleteEvent = (eventsList, index) => {
-    eventsList.splice(index, 1);
-    localStorage.setItem('eventsList', JSON.stringify(eventsList));
+export const deleteEvent = (index) => {
+    const localStorageValue = JSON.parse(localStorage.getItem("eventsList"));  
+    localStorageValue.splice(index, 1);
+    localStorage.setItem('eventsList', JSON.stringify(localStorageValue));
 }

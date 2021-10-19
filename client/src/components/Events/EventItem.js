@@ -16,7 +16,7 @@ const EventItem = (props) => {
         if (timeLeft <= 0) {
             // deleteEvent(index);
         return alert(`Событие ${item.event} произошло!`)}
-        const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 5000)
+        const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 1000)
         return () => clearInterval(timerId);
     });
 

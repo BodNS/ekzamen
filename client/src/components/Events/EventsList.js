@@ -16,8 +16,8 @@ return (
     <ul>
     {eventsList.map((elem, index) => {
         return (
-            <li key={index}>
-                <EventItem item={elem} index={index} deleteEvent={deleteEvent} />
+            <li key={Math.random()+index}>
+                <EventItem item={elem} index={index} deleteEvent={(index) => deleteEvent(index)} />
             </li> 
         )}
     )} 
