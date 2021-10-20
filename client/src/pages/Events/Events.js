@@ -6,7 +6,6 @@ const EventsPage = (props) => {
 
     const [updateEventList, setUpdateEventList] = useState(0);
 
-    const updEventListFn = (count) => setUpdateEventList (updateEventList + count);
     
     const localStorageValue = JSON.parse(localStorage.getItem("eventsList")) ?? [];    
 
@@ -14,14 +13,10 @@ const EventsPage = (props) => {
         document.querySelector("#form").style.display = "flex";
     }
 
-    useEffect(() => {
-        console.log('dd');
-    }, [updateEventList])
-
     return (
 <div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
-    <AddEventForm localStorageValue={localStorageValue}  updEventListFn={updEventListFn}/>
+    <AddEventForm localStorageValue={localStorageValue}  updEventListFn={setUpdateEventList}/>
     <EventsList eventsList={localStorageValue} />
    
 </div>

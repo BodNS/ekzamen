@@ -4,9 +4,9 @@ import {getTimeRemaining} from './functions';
 
 const EventItem = (props) => { 
 
-    const {item, index, deleteEvent} = props;
+    const {item, deleteEvent} = props;
 
-    const [timeLeft, setTimeLeft] = useState(Date.parse(item.warnFor) - Date.now());
+    const [timeLeft, setTimeLeft] = useState(() => Date.parse(item.warnFor) - Date.now());
     
 
     const alertTime = getTimeRemaining(timeLeft);
@@ -14,7 +14,7 @@ const EventItem = (props) => {
 
     useEffect(() => {
         if (timeLeft <= 0) {
-            // deleteEvent(index);
+            deleteEvent();
         return alert(`Событие ${item.event} произошло!`)}
         const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 1000)
         return () => clearInterval(timerId);
