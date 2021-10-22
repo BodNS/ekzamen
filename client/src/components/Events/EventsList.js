@@ -4,8 +4,6 @@ import styles from '../../pages/Events/Events.module.sass';
 import EventItem from './EventItem';
 import {deleteEvent} from './functions';
 
-
-
 const EventsList = (props) => { 
 
     const {eventsList} = props;
@@ -24,7 +22,9 @@ return (
         )}
     )} 
     </ul>
+    
 </div>
+
 )}
 
 export default EventsList;

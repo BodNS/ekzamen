@@ -10,7 +10,7 @@ const EventItem = (props) => {
     
 
     const alertTime = getTimeRemaining(timeLeft);
-    console.log(item.event, item.warnFor, Date.parse(item.warnFor) - Date.now(), timeLeft, alertTime);
+    // console.log(item.event, item.warnFor, Date.parse(item.warnFor) - Date.now(), timeLeft, alertTime);
 
     useEffect(() => {
         if (timeLeft <= 0) {
