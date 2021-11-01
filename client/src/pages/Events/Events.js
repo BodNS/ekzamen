@@ -4,7 +4,7 @@ import {AddEventForm, EventsList} from '../../components/Events';
 
 const EventsPage = (props) => { 
 
-    const [updateEventList, setUpdateEventList] = useState(0);
+    // const [updateEventList, setUpdateEventList] = useState(0);
 
     
     const localStorageValue = JSON.parse(localStorage.getItem("eventsList")) ?? [];    
@@ -16,7 +16,7 @@ const EventsPage = (props) => {
     return (
 <div className={styles.eventsPage}>
     <button onClick={addEvent} className={styles.addEventBtn}> Add Event </button>
-    <AddEventForm localStorageValue={localStorageValue}  updEventListFn={setUpdateEventList}/>
+    <AddEventForm localStorageValue={localStorageValue}  /* updEventListFn={setUpdateEventList} *//>
     <EventsList eventsList={localStorageValue} />
    
 </div>

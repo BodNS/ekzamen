@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from '../../pages/Events/Events.module.sass';
 import {getTimeRemaining} from './functions';
+import { connect } from 'react-redux';
 
 const EventItem = (props) => { 
 
@@ -27,4 +28,17 @@ return (
 </div>
 )}
 
-export default EventItem;
+const mapStateToProps = (state)=> {
+    console.log('state', state)
+    const {item} = state;
+    return item;
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        
+        }
+    }
+
+
+export default connect(mapStateToProps)(EventItem);
