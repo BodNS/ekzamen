@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from '../../pages/Events/Events.module.sass';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import {formatDate, formValuesToLocalStorage} from './functions';
+import Context from './context';
 
 const AddEventForm = (props) => {
   
-  const {localStorageValue, updEventListFn} = props;
+  const {localStorageValue} = props;
+
+  const value = useContext(Context);
 
     return (
         <Formik
-          initialValues={{ event: '', eventDate: '', warnFor: '' }}
+          initialValues={{ event: '', eventDate: '', warnFor: '', today: new Date() }}
           validationSchema={Yup.object({
             event: Yup.string()
               .max(50, 'Must be 50 characters or less')
@@ -33,7 +36,7 @@ const AddEventForm = (props) => {
             resetForm();
             alert('Event added!');
             document.querySelector("#form").style.display = "none";
-            updEventListFn((prev) => prev + 1);
+            value.setUpdateEventList((prev) => prev + 1);
             }
           }
           onReset={(_, {}) => {

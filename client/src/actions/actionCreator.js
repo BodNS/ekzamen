@@ -293,6 +293,3 @@ export const changeModalShow = (data) => ({
   data,
 });
 
-export const updateEvents = () => ({
-  type: ACTION.UPDATE_EVENTS_LIST,
-})

@@ -75,4 +75,24 @@ span
         border: 1px solid 
         margin: 5px 10px
 
+.eventItem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 2em
+    width: 100%
+    min-width: 4em
+    border: solid 2px lightgray
+    position: relative
 
+.eventItem 
+    div
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 0
+        background: linear-gradient(to top, #090, #0a0, #0c0, #0a0)
+        transition: width .5s linear
+        z-index: -1
