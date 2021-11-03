@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, {useEffect, useState, useContext, useRef} from 'react';
 import styles from '../../pages/Events/Events.module.sass';
 import {getTimeRemaining} from './functions';
 import Context from './context';
@@ -9,8 +9,8 @@ const EventItem = (props) => {
     const {item, deleteEvent} = props;
 
     const value = useContext(Context);
-
-    const progressBarWidth = document.querySelector('eventItem');
+    
+    const progressBarWidth = useRef();
 
     const [timeLeft, setTimeLeft] = useState(() => Date.parse(item.warnFor) - Date.now());
 
@@ -23,14 +23,19 @@ const EventItem = (props) => {
             value.setUpdateEventList((prev) => prev + 1);
             return alert(`Событие ${item.event} произошло!`)}
 
-                const progressBar = ()
+                const progressBar = () => {
+                    const progress = (Date.parse(item.warnFor) - Date.now()) *100 / (Date.parse(item.warnFor) - Date.parse(item.today))
+                    console.log(item.event, progress)
+                    return progressBarWidth.current.style.width = progress+'%'
+                }
 
         const timerId = setInterval(() => setTimeLeft(timeLeft-1000), 1000)
+        progressBar();
         return () => clearInterval(timerId);
     });
 
 return (
-<div className={styles.eventItem}>
+<div className={styles.eventItem} ref={progressBarWidth}>
     <span> {item.event} </span>
     <span> {alertTime.days}d {alertTime.hours}h {alertTime.minutes}m {alertTime.seconds}s</span>
 </div>
