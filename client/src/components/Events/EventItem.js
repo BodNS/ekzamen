@@ -25,7 +25,6 @@ const EventItem = (props) => {
 
                 const progressBar = () => {
                     const progress = (Date.parse(item.warnFor) - Date.now()) *100 / (Date.parse(item.warnFor) - Date.parse(item.today))
-                    console.log(item.event, progress)
                     return progressBarWidth.current.style.width = progress+'%'
                 }
 
@@ -35,11 +34,13 @@ const EventItem = (props) => {
     });
 
 return (
-<div className={styles.eventItem} ref={progressBarWidth}>
-    <span> {item.event} </span>
-    <span> {alertTime.days}d {alertTime.hours}h {alertTime.minutes}m {alertTime.seconds}s</span>
-</div>
-)}
+    <div className={styles.eventItem}>
+        <div className={styles.eventItemProgressBar} ref={progressBarWidth}></div>
+            <span> {item.event} </span>
+            <span> {alertTime.days}d {alertTime.hours}h {alertTime.minutes}m {alertTime.seconds}s</span>
+        
+    </div>
+    )}
 
 
 export default EventItem;

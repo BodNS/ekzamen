@@ -29,3 +29,4 @@ export const deleteEvent = (index) => {
     localStorageValue.splice(index, 1);
     localStorage.setItem('eventsList', JSON.stringify(localStorageValue));
 }
+
