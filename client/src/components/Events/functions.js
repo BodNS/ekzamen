@@ -30,3 +30,7 @@ export const deleteEvent = (index) => {
     localStorage.setItem('eventsList', JSON.stringify(localStorageValue));
 }
 
+export const progressBar = (item, progressBarWidth) => {
+    const progress = (Date.parse(item.warnFor) - Date.now()) *100 / (Date.parse(item.warnFor) - Date.parse(item.today))
+    return progressBarWidth.current.style.width = progress+'%'
+}

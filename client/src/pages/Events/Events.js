@@ -25,7 +25,7 @@ const EventsPage = (props) => {
                 <AddEventForm localStorageValue={localStorageValue} /*  updEventListFn={setUpdateEventList} *//>
                 <EventsList eventsList={localStorageValue} />
             </div>
-    </Context.Provider>
+        </Context.Provider>
    
 
     )}
